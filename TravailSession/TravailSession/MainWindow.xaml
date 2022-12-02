@@ -7,7 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <ScrollViewer>
+
+        <Grid>
+
+            <StackPanel Orientation="Vertical" >
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btListeTrajetAjd" Click="btListeTrajetAjd_Click">Liste trajets</Button>
+                    <Button x:Name="btCreationCompteChauffeur" Click="btCreationCompteChauffeur_Click">Création de compte (chauffeur)</Button>
+                    <Button x:Name="btCreationComptePassager" Click="btCreationComptePassager_Click">Création de compte (passager)</Button>
+                </StackPanel>
+
+                <Frame Name="mainFrame" />
+
+            </StackPanel>
+
+        </Grid>
+
+    </ScrollViewer>
 </Window>

@@ -28,9 +28,19 @@ namespace TravailSession
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void btListeTrajetAjd_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
+
+        }
+
+        private void btCreationCompteChauffeur_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCreationComptePassager_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
