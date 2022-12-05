@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="TravailSession.CreationComptePassager"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TravailSession"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer Background="Blue">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="Création de compte (Passager)" Grid.Row="0" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+
+                <TextBlock Text="Nom" Grid.Row="1" FontSize="30" Margin="50, 20, 0, 0"/>
+
+                <TextBox x:Name="nom" Grid.Row="2" Width="500" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="50, 10, 0, 0" BorderBrush="Blue" BorderThickness="3"/>
+                <TextBlock x:Name="nomErreur" Text="" FontSize="20" Margin="50, 0, 0, 0"/>
+
+                <TextBlock Text="Prénom" Grid.Row="3" FontSize="30" Margin="50, 20, 0, 0"/>
+
+                <TextBox x:Name="prenom" Grid.Row="4" Width="500" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="50, 10, 0, 0" BorderBrush="Blue" BorderThickness="3"/>
+                <TextBlock x:Name="prenomErreur" Text="" FontSize="20" Margin="50, 0, 0, 0"/>
+
+                <TextBlock Text="Adresse" Grid.Row="5" FontSize="30" Margin="50, 20, 0, 0"/>
+
+                <TextBox x:Name="adresse" Grid.Row="6" Width="500" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="50, 10, 0, 0" BorderBrush="Blue" BorderThickness="3"/>
+                <TextBlock x:Name="adresseErreur" Text="" FontSize="20" Margin="50, 0, 0, 0"/>
+
+                <TextBlock Text="Numéro de téléphone" Grid.Row="7" FontSize="30" Margin="50, 20, 0, 0"/>
+
+                <TextBox x:Name="telephone" Grid.Row="8" Width="500" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="50, 10, 0, 0" BorderBrush="Blue" BorderThickness="3"/>
+                <TextBlock x:Name="telephoneErreur" Text="" FontSize="20" Margin="50, 0, 0, 0"/>
+
+                <TextBlock Text="Email" Grid.Row="9" FontSize="30" Margin="50, 20, 0, 0"/>
+
+                <TextBox x:Name="email" Grid.Row="10" Width="500" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="50, 10, 0, 0" BorderBrush="Blue" BorderThickness="3"/>
+                <TextBlock x:Name="emailErreur" Text="" FontSize="20" Margin="50, 0, 0, 0"/>
+
+                <TextBlock Text="Mot de Passe" Grid.Row="11" FontSize="30" Margin="50, 20, 0, 0"/>
+
+                <TextBox x:Name="mdp" Grid.Row="12" Width="500" Height="40" FontSize="15" HorizontalAlignment="Left" Margin="50, 10, 0, 0" BorderBrush="Blue" BorderThickness="3"/>
+                <TextBlock x:Name="mdpErreur" Text="" FontSize="20" Margin="50, 0, 0, 0"/>
+
+                <Button x:Name="btCreationComptePassagerFin" Click="btCreationComptePassagerFin_Click" Content="Créer Compte" Grid.Row="13" Width="200" FontSize="25" HorizontalAlignment="Center" Margin="0, 20, 0, 25" BorderBrush="Blue" BorderThickness="3"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </ScrollViewer>
+</Page>

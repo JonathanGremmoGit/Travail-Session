@@ -26,20 +26,35 @@ namespace TravailSession
         public MainWindow()
         {
             this.InitializeComponent();
+            mainFrame.Navigate(typeof(PageListeTrajetsAjd));
         }
 
         private void btListeTrajetAjd_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Navigate(typeof(PageListeTrajetsAjd));
         }
 
-        private void btCreationCompteChauffeur_Click(object sender, RoutedEventArgs e)
+        private void btCreationCompteConducteur_Click(object sender, RoutedEventArgs e)
         {
+            mainFrame.Navigate(typeof(CreationCompteConducteur));
 
         }
 
         private void btCreationComptePassager_Click(object sender, RoutedEventArgs e)
         {
+            mainFrame.Navigate(typeof(CreationComptePassager));
+
+        }
+
+        private void btConnexion_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(PageConnexion));
+
+        }
+
+        private void btReservationTrajet_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(PageReservationTrajet));
 
         }
     }
