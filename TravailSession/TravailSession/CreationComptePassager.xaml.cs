@@ -30,7 +30,46 @@ namespace TravailSession
 
         private void btCreationComptePassagerFin_Click(object sender, RoutedEventArgs e)
         {
+            if (nom.Text == "")
+            {
+                nomErreur.Text = "Entrez un nom";
+            }
+            else nomErreur.Text = "";
 
+            if (prenom.Text == "")
+            {
+                prenomErreur.Text = "Entrez un prénom";
+            }
+            else prenomErreur.Text = "";
+
+            if (adresse.Text == "")
+            {
+                adresseErreur.Text = "Entrez votre adresse";
+            }
+            else adresseErreur.Text = "";
+
+            if (telephone.Text == "")
+            {
+                telephoneErreur.Text = "Entrez un numéro de téléphone";
+            }
+            else telephoneErreur.Text = "";
+
+            if (email.Text == "")
+            {
+                emailErreur.Text = "Entrez l'email identifiant";
+            }
+            else emailErreur.Text = "";
+
+            if (mdp.Text == "")
+            {
+                mdpErreur.Text = "Entrez votre mot de passe";
+            }
+            else mdpErreur.Text = "";
+
+            if (nom.Text != "" && prenom.Text != "" && adresse.Text != "" && telephone.Text != "" && email.Text != "" && mdp.Text != "")
+            {
+                this.Frame.Navigate(typeof(PageListeTrajetsAjd));
+            }
         }
     }
 }

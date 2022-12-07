@@ -37,13 +37,11 @@ namespace TravailSession
         private void btCreationCompteConducteur_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(typeof(CreationCompteConducteur));
-
         }
 
         private void btCreationComptePassager_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(typeof(CreationComptePassager));
-
         }
 
         private void btConnexion_Click(object sender, RoutedEventArgs e)
@@ -55,6 +53,11 @@ namespace TravailSession
         private void btReservationTrajet_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(typeof(PageReservationTrajet));
+        }
+
+        private void btAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(Admin)); 
 
         }
     }

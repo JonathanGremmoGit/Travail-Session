@@ -21,31 +21,11 @@ namespace TravailSession
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PageConnexion : Page
+    public sealed partial class Admin : Page
     {
-        public PageConnexion()
+        public Admin()
         {
             this.InitializeComponent();
-        }
-
-        private void btConnexion_Click(object sender, RoutedEventArgs e)
-        {
-            if (emailConnexion.Text == "")
-            {
-                emailConnexionErreur.Text = "Entrez un email identifiant";
-            }
-            else emailConnexionErreur.Text = "";
-
-            if (mdp.Text == "")
-            {
-                mdpErreur.Text = "Entrez votre mot de passe";
-            }
-            else mdpErreur.Text = "";
-
-            if (emailConnexion.Text != "" && mdp.Text != "")
-            {
-                this.Frame.Navigate(typeof(PageListeTrajetsAjd));
-            }
         }
     }
 }
