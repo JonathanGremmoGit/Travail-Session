@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -66,10 +68,42 @@ namespace TravailSession
             }
             else mdpErreur.Text = "";
 
-            if (nom.Text != "" && prenom.Text != "" && adresse.Text != "" && telephone.Text != "" && email.Text != "" && mdp.Text != "")
+            if (typeVoiture.SelectedIndex == -1)
             {
+                typeVoitureErreur.Text = "Choisir un type de voiture";
+            }
+            else typeVoitureErreur.Text = "";
+
+            if (idVoituree.Text == "")
+            {
+                idVoitureeErreur.Text = "Entrez le numero de la voiture";
+            }
+            else idVoitureeErreur.Text = "";
+
+            if (nom.Text != "" && prenom.Text != "" && adresse.Text != "" && telephone.Text != "" && email.Text != "" && mdp.Text != "" && typeVoiture.SelectedIndex != -1)
+            {
+
+                string mdpHash = genererSHA256(mdp.Text);
+
+                GestionBD.getInstance().ajouterConducteur(new Conducteur(nom.Text, prenom.Text, Convert.ToInt32(idVoituree.Text), adresse.Text, telephone.Text, email.Text, mdp.Text));
+
                 this.Frame.Navigate(typeof(PageListeTrajetsAjd));
             }
         }
+
+        private string genererSHA256(string texte)
+        {
+            var sha256 = SHA256.Create();
+            byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(texte));
+
+            StringBuilder sb = new StringBuilder();
+            foreach (Byte b in bytes)
+                sb.Append(b.ToString("x2"));
+
+            return sb.ToString();
+        }
+
+
+
     }
 }

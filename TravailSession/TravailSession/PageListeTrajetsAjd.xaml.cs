@@ -26,6 +26,7 @@ namespace TravailSession
         public PageListeTrajetsAjd()
         {
             this.InitializeComponent();
+            lvListe.ItemsSource = GestionBD.getInstance().GetTrajets();
         }
     }
 }

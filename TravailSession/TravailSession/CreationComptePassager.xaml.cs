@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -68,8 +70,25 @@ namespace TravailSession
 
             if (nom.Text != "" && prenom.Text != "" && adresse.Text != "" && telephone.Text != "" && email.Text != "" && mdp.Text != "")
             {
+                string mdpHash = genererSHA256(mdp.Text);
+
+                GestionBD.getInstance().ajouterPassager(new Passager(nom.Text, prenom.Text, adresse.Text, telephone.Text, email.Text, mdp.Text));
+
                 this.Frame.Navigate(typeof(PageListeTrajetsAjd));
             }
+
+            string genererSHA256(string texte)
+            {
+                var sha256 = SHA256.Create();
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(texte));
+
+                StringBuilder sb = new StringBuilder();
+                foreach (Byte b in bytes)
+                    sb.Append(b.ToString("x2"));
+
+                return sb.ToString();
+            }
+
         }
     }
 }

@@ -16,6 +16,56 @@
 
                 <TextBlock Text="Liste des trajets aujourd'hui" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,0"/>
 
+                <ListView x:Name="lvListe" SelectedItem="objet">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Trajet">
+                            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Stretch">
+                                <StackPanel Margin="20">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Trajet " Margin="5,5,5,10" FontSize="25" FontWeight="Bold"/>
+                                    <TextBlock Text="{x:Bind IdTrajet}" Margin="5,5,5,10" FontSize="25" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Chauffeur : " Margin="5,5,5,5"/>
+                                        <TextBlock Text="{x:Bind PrenomChauffeur}" Margin="0,5,0,5"/>
+                                        <TextBlock Text="{x:Bind NomChauffeur}" Margin="5,5,0,5"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Date : " Margin="5,5,0,5"/>
+                                        <TextBlock Text="{x:Bind Date1}" Margin="5,5,5,5"/>
+                                    </StackPanel>
+                                    
+                                    
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="De : " Margin="5,5,0,5"/>
+                                        <TextBlock Text="{x:Bind HeureDepart}" Margin="5,5,5,5"/>
+                                        <TextBlock Text="a" Margin="0,5,0,5"/>
+                                        <TextBlock Text="{x:Bind HeureArrive}" Margin="5,5,5,5"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="De : " Margin="5,5,0,5"/>
+                                        <TextBlock Text="{x:Bind VilleDepart}" Margin="5,5,5,5"/>
+                                        <TextBlock Text="vers : " Margin="5,5,0,5"/>
+                                        <TextBlock Text="{x:Bind VilleArrive}" Margin="5,5,5,5"/>
+                                    </StackPanel>
+
+                                    
+                                    
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Prix : " Margin="5,5,5,5"/>
+                                        <TextBlock Text="{x:Bind PrixPassager}" Margin="0,5,0,5"/>
+                                        <TextBlock Text="$" Margin="0,5,5,5"/>
+                                    </StackPanel>
+                                    
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
             </StackPanel>
 
         </Grid>
